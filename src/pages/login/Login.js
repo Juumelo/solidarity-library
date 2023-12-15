@@ -3,6 +3,8 @@ import styles from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../../hooks/useUserContext";
 
+
+
 const url = "http://localhost:5000";
 
 const Login = () => {
@@ -53,6 +55,7 @@ const Login = () => {
   return (
     <div className={styles.containerLogin}>
       <form className={styles.formLogin} onSubmit={handleSubmit}>
+
         <input
           type="text"
           placeholder="User"
@@ -67,6 +70,8 @@ const Login = () => {
         />
         <button type="submit">NEXT</button>
       </form>
+      <div className={styles.rodape}>
+      <img  src='rodape.png' alt='logo' /></div>
     </div>
   );
 };

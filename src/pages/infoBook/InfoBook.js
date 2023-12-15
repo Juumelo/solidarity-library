@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./InfoBook.module.css";
 import { useParams } from "react-router-dom";
 import { useUserContext } from "../../hooks/useUserContext";
+import Navbar from "../../components/navbar/Navbar";
 
 const url = "http://localhost:5000";
 
@@ -13,41 +14,41 @@ const InfoBook = () => {
   const [book, setBook] = useState();
   const [protocol, setProtocol] = useState();
 
-  useEffect(() => {
-    function getBook() {
-      const corpo = {
-        method: "GET",
-        headers: {
-          "Content-type": "application/json",
-        },
-        mode: "cors",
-      };
+  // useEffect(() => {
+  //   function getBook() {
+  //     const corpo = {
+  //       method: "GET",
+  //       headers: {
+  //         "Content-type": "application/json",
+  //       },
+  //       mode: "cors",
+  //     };
 
-      fetch(url + `/books/${id}`, corpo)
-        .then((resposta) => resposta.json())
-        .then((dados) => {
-          setBook(dados[0]);
-        });
-    }
+  //     fetch(url + `/books/${id}`, corpo)
+  //       .then((resposta) => resposta.json())
+  //       .then((dados) => {
+  //         setBook(dados[0]);
+  //       });
+  //   }
 
-    function getProtocol() {
-      const corpo = {
-        method: "GET",
-        headers: {
-          "Content-type": "application/json",
-        },
-        mode: "cors",
-      };
+  //   function getProtocol() {
+  //     const corpo = {
+  //       method: "GET",
+  //       headers: {
+  //         "Content-type": "application/json",
+  //       },
+  //       mode: "cors",
+  //     };
 
-      fetch(url + `/protocols/id-book/${id}`, corpo)
-        .then((resposta) => resposta.json())
-        .then((dados) => {
-          setProtocol(dados[0]);
-        });
-    }
-    getBook();
-    getProtocol();
-  }, [id]);
+  //     fetch(url + `/protocols/id-book/${id}`, corpo)
+  //       .then((resposta) => resposta.json())
+  //       .then((dados) => {
+  //         setProtocol(dados[0]);
+  //       });
+  //   }
+  //   getBook();
+  //   getProtocol();
+  // }, [id]);
 
   console.log(protocol);
 
@@ -108,8 +109,10 @@ const InfoBook = () => {
 
   return (
     <div>
+    <Navbar />
+
       <div className={styles.card}>
-        {book && (
+        {/* {book && (
           <>
             <h1>
               Titulo: <span>{book.title}</span>
@@ -126,7 +129,23 @@ const InfoBook = () => {
             <button onClick={handleClickPOST}>Retirar</button>
             <button onClick={handleClickPUT}>Devolver</button>
           </>
-        )}
+        )} */}
+             
+            <h1>
+              Titulo: <span>vjhlhl</span>
+            </h1>
+            <h2>
+              Paginas:<span>fgjhfjh</span>
+            </h2>
+            <h2>
+              Autor:<span>fhgjfgj</span>
+            </h2>
+            <h3>
+              Doado em:<span>kghjkhj</span>
+            </h3>
+            <button onClick={handleClickPOST}>Retirar</button>
+            <button onClick={handleClickPUT}>Devolver</button>
+       
       </div>
     </div>
   );

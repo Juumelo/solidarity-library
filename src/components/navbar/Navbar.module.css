@@ -1,12 +1,13 @@
 .containerNavbar{
     display: flex;
     justify-content: space-around;
-    background-color: rgb(7, 160, 2);
+    background-color:  #0A8F3E;
+    ;
     padding: 20px 0;
 }
 
 .containerNavbar a{
-    color: rgb(255, 255, 255);
+    color: #fcfcfc;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;

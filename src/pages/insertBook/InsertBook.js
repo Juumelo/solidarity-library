@@ -11,6 +11,7 @@ const InsertBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [pages, setPages] = useState(0);
+  const [files, setFiles] = useState('');
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -44,7 +45,16 @@ const InsertBook = () => {
   return (
     <div className={styles.containerInsertBook}>
       <Navbar />
+
       <form onSubmit={handleSubmit} className={styles.form}>
+        <label >
+          <input
+            type="file"
+            placeholder="Imagem"
+            value={files}
+            onChange={(e) => setFiles(e.target.value)}
+          />
+        </label>
         <label >
           <input
             type="text"
