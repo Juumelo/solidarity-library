@@ -3,6 +3,7 @@ import styles from "./InfoBook.module.css";
 import { useParams } from "react-router-dom";
 import { useUserContext } from "../../hooks/useUserContext";
 import Navbar from "../../components/navbar/Navbar";
+import livro from "../../components/navbar/livro.png"
 
 const url = "http://localhost:5000";
 
@@ -112,7 +113,7 @@ const InfoBook = () => {
     <Navbar />
 
       <div className={styles.card}>
-        {/* {book && (
+      {/* { {book && (
           <>
             <h1>
               Titulo: <span>{book.title}</span>
@@ -129,22 +130,23 @@ const InfoBook = () => {
             <button onClick={handleClickPOST}>Retirar</button>
             <button onClick={handleClickPUT}>Devolver</button>
           </>
-        )} */}
-             
-            <h1>
-              Titulo: <span>vjhlhl</span>
-            </h1>
-            <h2>
-              Paginas:<span>fgjhfjh</span>
-            </h2>
-            <h2>
-              Autor:<span>fhgjfgj</span>
-            </h2>
-            <h3>
-              Doado em:<span>kghjkhj</span>
-            </h3>
-            <button onClick={handleClickPOST}>Retirar</button>
-            <button onClick={handleClickPUT}>Devolver</button>
+        )} } */}
+            <img src={livro} />
+            
+            <p>
+              Título: <span>vjhlhl</span>
+            </p>
+            <p>
+              Páginas: <span>fgjhfjh</span>
+            </p>
+            <p>
+              Autor: <span>fhgjfgj</span>
+            </p>
+            <p>
+              Doado em: <span>kghjkhj</span>
+            </p>
+            <button  onClick={handleClickPOST}>Retirar</button>
+            <button  onClick={handleClickPUT}>Devolver</button>
        
       </div>
     </div>

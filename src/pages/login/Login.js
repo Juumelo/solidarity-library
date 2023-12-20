@@ -70,8 +70,7 @@ const Login = () => {
         />
         <button type="submit">NEXT</button>
       </form>
-      <div className={styles.rodape}>
-      <img  src='rodape.png' alt='logo' /></div>
+      <img src='rodape.png' alt='logo' />
     </div>
   );
 };
