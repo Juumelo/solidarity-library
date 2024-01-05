@@ -3,12 +3,12 @@ button  {
     background-color: transparent;
 }
 .starButton{
-    display: contents;
-    margin: 2px;
-}
-.heartButton{
-    float: none;
-    margin: 2px;
+    display: contents;   
 
-    
+}
+
+.heartButton{
+    display: contents;   
+
+
 }

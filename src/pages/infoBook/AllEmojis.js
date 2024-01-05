@@ -7,7 +7,7 @@ export const Star = ({ isActive, onClick }) => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 576 512"
-          fill={isActive ? "orange" : "#ccc"}
+          fill={isActive ? "#fccc2b" : "#ccc"}
           width={15}
           height={15}
         >
@@ -17,20 +17,69 @@ export const Star = ({ isActive, onClick }) => {
     </div>
   );
 };
- export const Heart = ({ isActive, onClick }) => {
+export const Heart = ({ isActive, onClick }) => {
+  return (
+    <div className={styles.heartButton}>
+      <button onClick={onClick}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill={isActive ? "red" : "#ccc"}
+          width={15}
+          height={15}
+        >
+          <path d="M20.808 11.079C19.829 16.132 12 20.5 12 20.5s-7.829-4.368-8.808-9.421C2.227 6.1 5.066 3.5 8 3.5a4.444 4.444 0 0 1 4 2 4.444 4.444 0 0 1 4-2c2.934 0 5.773 2.6 4.808 7.579z" />
+        </svg>
+      </button>
+    </div>
+  );
+};
+export const Fun = ({ isActive, onClick }) => {
+  return (
+    <div className={styles.heartButton}>
+      <button onClick={onClick}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          fill={isActive ? "#fccc2b" : "#ccc"}
+          width={15}
+          height={15}
+        >
+          <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM164.1 325.5C182 346.2 212.6 368 256 368s74-21.8 91.9-42.5c5.8-6.7 15.9-7.4 22.6-1.6s7.4 15.9 1.6 22.6C349.8 372.1 311.1 400 256 400s-93.8-27.9-116.1-53.5c-5.8-6.7-5.1-16.8 1.6-22.6s16.8-5.1 22.6 1.6zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+        </svg>
+      </button>
+    </div>
+  );
+};
+export const Sad = ({ isActive, onClick }) => {
   return (
     <div className={styles.heartButton}>
       <button onClick={onClick}>
       <svg xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 24 24"
-      fill={isActive ? "red" : "#ccc"}
+      fill={isActive ? "blue" : "#ccc"}
       width={15}
       height={15}
-      >
-      <path d="M20.808 11.079C19.829 16.132 12 20.5 12 20.5s-7.829-4.368-8.808-9.421C2.227 6.1 5.066 3.5 8 3.5a4.444 4.444 0 0 1 4 2 4.444 4.444 0 0 1 4-2c2.934 0 5.773 2.6 4.808 7.579z"/>
+      viewBox="0 0 512 512">
+      <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM159.3 388.7c-2.6 8.4-11.6 13.2-20 10.5s-13.2-11.6-10.5-20C145.2 326.1 196.3 288 256 288s110.8 38.1 127.3 91.3c2.6 8.4-2.1 17.4-10.5 20s-17.4-2.1-20-10.5C340.5 349.4 302.1 320 256 320s-84.5 29.4-96.7 68.7zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
       </svg>
       </button>
     </div>
   );
 };
-
+export const Shocking = ({ isActive, onClick }) => {
+  return (
+    <div className={styles.heartButton}>
+      <button onClick={onClick}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          fill={isActive ? "#fccc2b" : "#ccc"}
+          width={15}
+          height={15}
+        >
+          <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM176.4 176a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm128 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM256 288a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+        </svg>
+      </button>
+    </div>
+  );
+};

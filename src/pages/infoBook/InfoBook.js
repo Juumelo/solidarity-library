@@ -3,9 +3,9 @@ import styles from "./InfoBook.module.css";
 import { useParams } from "react-router-dom";
 import { useUserContext } from "../../hooks/useUserContext";
 import Navbar from "../../components/navbar/Navbar";
-import livro from "../../components/navbar/livro.png";
+import nopicture from "../../pages/infoBook/nopicture.png";
 import ReactStars from "react-stars";
-import { Star, Heart } from "./AllEmojis";
+import { Star, Heart, Fun, Sad, Shocking } from "./AllEmojis";
 
 const url = "http://localhost:5000";
 
@@ -15,6 +15,9 @@ const InfoBook = () => {
   const items = [...Array(5).keys()];
   const [activeStar, setActiveStar] = useState();
   const [activeHeart, setActiveHeart] = useState();
+  const [activeFun, setActiveFun] = useState();
+  const [activeSad, setActiveSad] = useState();
+  const [activeShocking, setActiveShocking] = useState();
 
   const { user, setUser } = useUserContext();
 
@@ -119,6 +122,16 @@ const InfoBook = () => {
   const onClickHeart = (index) => {
     setActiveHeart((oldState) => (oldState === index ? undefined : index));
   };
+  const onClickFun = (index) => {
+    setActiveFun((oldState) => (oldState === index ? undefined : index));
+  };
+  const onClickSad = (index) => {
+    setActiveSad((oldState) => (oldState === index ? undefined : index));
+  };
+  const onClickShocking = (index) => {
+    setActiveShocking((oldState) => (oldState === index ? undefined : index));
+  };
+
   return (
     <div>
       <Navbar />
@@ -142,7 +155,7 @@ const InfoBook = () => {
             <button onClick={handleClickPUT}>Devolver</button>
           </>
         )} } */}
-        <img src={livro} />
+        <img src={nopicture} />
 
         <p>
           Título: <span>vjhlhl</span>
@@ -156,15 +169,18 @@ const InfoBook = () => {
         <p>
           Doado em: <span>kghjkhj</span>
         </p>
-        <p>Avaliação:</p>
         <div className={styles.avaliation}>
+        <p>Avaliação :</p>
+        <div>
           {items.map((index) => (
             <Star
               onClick={() => onClickStar(index)}
               key={`star_${index}`}
               isActive={index <= activeStar}
             />
-          ))}
+          ))}</div>
+          <div>
+          <p>Romantico :</p>
           {items.map((index) => (
             <Heart
             onClick={() => onClickHeart(index)}
@@ -172,8 +188,48 @@ const InfoBook = () => {
             isActive={index <= activeHeart}
             
             />
+          ))}</div>
+          <div>
+          <p>Divertido :</p>
+
+          {items.map((index) => (
+            <Fun
+            onClick={() => onClickFun(index)}
+            key={`star_${index}`}
+            isActive={index <= activeFun}
+            
+            />
+          ))}</div>
+          <div>
+          <p>Triste :</p>
+
+          {items.map((index) => (
+            <Sad
+            onClick={() => onClickSad(index)}
+            key={`star_${index}`}
+            isActive={index <= activeSad}
+            
+            />
+            
+          ))}</div>
+          
+          <div>
+          <p>Chocante :</p>
+
+          {items.map((index) => (
+            <Shocking
+            onClick={() => onClickShocking(index)}
+            key={`star_${index}`}
+            isActive={index <= activeShocking}
+            
+            />
           ))}
+          </div>
+          <p>Comentários:</p>
+          <textarea className={styles.coments} type="text" name="coments" />
         </div>
+        
+        
         <div className={styles.return}>
           <button onClick={handleClickPOST}>Retirar</button>
           <button onClick={handleClickPUT}>Devolver</button>
