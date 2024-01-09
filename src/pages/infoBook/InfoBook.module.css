@@ -1,20 +1,31 @@
 .card{
+    /* padding-top: 10px; */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 85%;
     border-radius: 16px;
     
+    
 }
-.card p{
-    font-size: 18px;
+.card h2{
+    font-size: 23px;
+    font-weight: 330;
+    margin-top: 0;
+    text-align: center;
+}
+.card span{
+    line-height: 28px ;
 }
 .card img{
-    width: 315px;
-    height: 240px;
+    width: 60%;
+    padding-top: 10px;
     margin: 0 auto;
 
 
+}
+.star{
+    margin-left: 22%;
 }
 .return button{
     background-color: #0A8F3E;
@@ -30,14 +41,25 @@
 .return button:active{
     background-color:#065825;
 }
-.avaliation{
-    /* padding-left: 7px; */
 
-}
 .coments{
-    width: 95%;
+    width: 98%;
     height: 50px;
     /* border: 1px solid; */
     border-radius: 5px;
 
 }
+.avaliation{
+    /* justify-content: space-between; */
+}
+.heart{
+    float: right;
+}
+.shocking{
+    
+}
+.sad{
+    
+    float: right;
+}
+

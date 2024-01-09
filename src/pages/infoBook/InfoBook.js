@@ -3,7 +3,7 @@ import styles from "./InfoBook.module.css";
 import { useParams } from "react-router-dom";
 import { useUserContext } from "../../hooks/useUserContext";
 import Navbar from "../../components/navbar/Navbar";
-import nopicture from "../../pages/infoBook/nopicture.png";
+import nopicture from "../../pages/infoBook/bruxosebruxas.jpg";
 import ReactStars from "react-stars";
 import { Star, Heart, Fun, Sad, Shocking } from "./AllEmojis";
 
@@ -157,29 +157,34 @@ const InfoBook = () => {
         )} } */}
         <img src={nopicture} />
 
-        <p>
-          Título: <span>vjhlhl</span>
-        </p>
-        <p>
-          Páginas: <span>fgjhfjh</span>
-        </p>
-        <p>
-          Autor: <span>fhgjfgj</span>
-        </p>
-        <p>
-          Doado em: <span>kghjkhj</span>
-        </p>
+        <span>
+        <hr/>
+         <h2>Bruxos e Bruxas</h2>
+        </span>
+        <span>
+          Páginas: <span>288</span>
+        </span>
+        <span>
+          Autor: <span>James Patterson & Gabrielle Charbonnet.</span>
+        </span>
+        <span>
+          Doado em: <span>05/01/2024</span>
+          <hr/>
+        </span>
         <div className={styles.avaliation}>
-        <p>Avaliação :</p>
-        <div>
+        <h2>Avaliação:</h2>
+        <div className={styles.star}> 
           {items.map((index) => (
             <Star
               onClick={() => onClickStar(index)}
               key={`star_${index}`}
               isActive={index <= activeStar}
             />
-          ))}</div>
-          <div>
+          ))}
+          </div>
+          
+          <div><hr/>
+          <div className={styles.heart}>
           <p>Romantico :</p>
           {items.map((index) => (
             <Heart
@@ -189,7 +194,7 @@ const InfoBook = () => {
             
             />
           ))}</div>
-          <div>
+          <div >
           <p>Divertido :</p>
 
           {items.map((index) => (
@@ -199,8 +204,10 @@ const InfoBook = () => {
             isActive={index <= activeFun}
             
             />
-          ))}</div>
+          ))}
+          </div></div>
           <div>
+          <div className={styles.sad}>
           <p>Triste :</p>
 
           {items.map((index) => (
@@ -213,7 +220,7 @@ const InfoBook = () => {
             
           ))}</div>
           
-          <div>
+          <div className={styles.shocking}>
           <p>Chocante :</p>
 
           {items.map((index) => (
@@ -224,14 +231,14 @@ const InfoBook = () => {
             
             />
           ))}
-          </div>
-          <p>Comentários:</p>
+          </div></div>
+          <p> <hr/>Comentários:</p>
           <textarea className={styles.coments} type="text" name="coments" />
         </div>
         
         
         <div className={styles.return}>
-          <button onClick={handleClickPOST}>Retirar</button>
+          {/* <button onClick={handleClickPOST}>Retirar</button> */}
           <button onClick={handleClickPUT}>Devolver</button>
         </div>
       </div>
