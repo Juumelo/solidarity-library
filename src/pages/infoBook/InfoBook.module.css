@@ -12,6 +12,7 @@
     font-size: 23px;
     font-weight: 330;
     margin-top: 0;
+    margin-bottom: 10px;
     text-align: center;
 }
 .card span{
@@ -23,9 +24,6 @@
     margin: 0 auto;
 
 
-}
-.star{
-    margin-left: 22%;
 }
 .return button{
     background-color: #0A8F3E;
@@ -49,17 +47,21 @@
     border-radius: 5px;
 
 }
-.avaliation{
-    /* justify-content: space-between; */
+.star{
+    text-align: center;
 }
+
 .heart{
     float: right;
+    
 }
 .shocking{
     
 }
 .sad{
-    
     float: right;
 }
 
+.twoEnd{
+    padding-bottom: 15px;
+}

@@ -181,11 +181,11 @@ const InfoBook = () => {
               isActive={index <= activeStar}
             />
           ))}
-          </div>
+        </div>
           
-          <div><hr/>
+          <div className={styles.twoFirst}><hr/>
           <div className={styles.heart}>
-          <p>Romantico :</p>
+          <span>Romântico :</span><br></br>
           {items.map((index) => (
             <Heart
             onClick={() => onClickHeart(index)}
@@ -195,7 +195,7 @@ const InfoBook = () => {
             />
           ))}</div>
           <div >
-          <p>Divertido :</p>
+          <span>Divertido :</span><br></br>
 
           {items.map((index) => (
             <Fun
@@ -206,9 +206,9 @@ const InfoBook = () => {
             />
           ))}
           </div></div>
-          <div>
+          <div className={styles.twoEnd}>
           <div className={styles.sad}>
-          <p>Triste :</p>
+          <span>Triste :</span><br></br>
 
           {items.map((index) => (
             <Sad
@@ -221,7 +221,7 @@ const InfoBook = () => {
           ))}</div>
           
           <div className={styles.shocking}>
-          <p>Chocante :</p>
+          <span>Chocante : </span><br></br>
 
           {items.map((index) => (
             <Shocking
