@@ -60,7 +60,14 @@ const InfoBook = () => {
   //   getProtocol();
   // }, [id]);
 
-  console.log(protocol);
+  // console.log(protocol);
+
+
+  // console.log(activeStar);
+  // console.log(activeHeart);
+  // console.log(activeFun);
+  // console.log(activeShocking);
+  // console.log(activeSad);
 
   function formatDate(dateNotFormat) {
     const date = new Date(dateNotFormat);
@@ -176,9 +183,9 @@ const InfoBook = () => {
         <div className={styles.star}> 
           {items.map((index) => (
             <Star
-              onClick={() => onClickStar(index)}
+              onClick={() => onClickStar(index+1)}
               key={`star_${index}`}
-              isActive={index <= activeStar}
+              isActive={index+1 <= activeStar}
             />
           ))}
         </div>
@@ -188,9 +195,9 @@ const InfoBook = () => {
           <span>Romântico :</span><br></br>
           {items.map((index) => (
             <Heart
-            onClick={() => onClickHeart(index)}
+            onClick={() => onClickHeart(index+1)}
             key={`star_${index}`}
-            isActive={index <= activeHeart}
+            isActive={index+1 <= activeHeart}
             
             />
           ))}</div>
@@ -199,9 +206,9 @@ const InfoBook = () => {
 
           {items.map((index) => (
             <Fun
-            onClick={() => onClickFun(index)}
+            onClick={() => onClickFun(index+1)}
             key={`star_${index}`}
-            isActive={index <= activeFun}
+            isActive={index+1 <= activeFun}
             
             />
           ))}
@@ -212,9 +219,9 @@ const InfoBook = () => {
 
           {items.map((index) => (
             <Sad
-            onClick={() => onClickSad(index)}
+            onClick={() => onClickSad(index+1)}
             key={`star_${index}`}
-            isActive={index <= activeSad}
+            isActive={index+1 <= activeSad}
             
             />
             
@@ -225,9 +232,9 @@ const InfoBook = () => {
 
           {items.map((index) => (
             <Shocking
-            onClick={() => onClickShocking(index)}
+            onClick={() => onClickShocking(index+1)}
             key={`star_${index}`}
-            isActive={index <= activeShocking}
+            isActive={index+1 <= activeShocking}
             
             />
           ))}
